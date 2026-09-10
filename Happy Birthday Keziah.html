@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<title>Happy Birthday Keziah ❤️</title>
+<meta name="theme-color" content="#ffd6ea" />
+<style>
+:root{
+  --bg1:#ffd6ea; --bg2:#ffe9f7; --bg3:#fff6fb;
+  --card-bg: rgba(255,255,255,.95);
+  --accent:#ff2d7d; --muted:#666; --button-bg:#ff69b4;
+  --max-width:720px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial;
+  background:linear-gradient(135deg,var(--bg1),var(--bg2),var(--bg3));
+  -webkit-font-smoothing:antialiased;
+  display:flex;align-items:center;justify-content:center;min-height:100vh;padding:env(safe-area-inset-top) 12px;
+}
+
+/* Card */
+.card{
+  width:100%;max-width:var(--max-width);background:var(--card-bg);border-radius:18px;padding:16px;text-align:center;
+  box-shadow:0 12px 30px rgba(255,105,180,.22);position:relative;z-index:2;
+}
+.header{display:flex;align-items:center;justify-content:center;margin-bottom:6px}
+h1{font-size:1.6rem;color:#ff4d9d;margin:0}
+h2{font-size:1rem;color:#ff7bbd;margin:6px 0}
+p{color:var(--muted);margin:8px auto;line-height:1.5;max-width:46ch}
+.signature{font-weight:700;color:var(--accent);margin-top:10px}
+
+/* Controls */
+.controls{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+button{
+  -webkit-tap-highlight-color:transparent;
+  padding:12px 14px;border-radius:999px;border:none;background:var(--button-bg);
+  color:#fff;font-weight:700;font-size:15px;min-height:46px;display:inline-flex;align-items:center;gap:8px;cursor:pointer;
+  box-shadow:0 6px 18px rgba(255,105,180,.18);
+}
+button.secondary{background:transparent;color:var(--accent);border:2px solid rgba(255,45,125,.12)}
+button:active{transform:translateY(1px)}
+button:focus{outline:3px solid rgba(255,105,180,.22);outline-offset:3px}
+
+/* Surprise text */
+#surprise{display:none;margin-top:10px;font-weight:700;color:var(--accent)}
+
+/* canvas decorations (fills viewport, decorative only) */
+#decorCanvas{position:fixed;left:0;top:0;width:100%;height:100%;pointer-events:none;z-index:1}
+
+/* compact visuals */
+.cat{width:140px;height:140px;margin:0 auto 6px;position:relative}
+.face{width:110px;height:100px;left:15px;top:22px;border-width:3px}
+</style>
+</head>
+<body>
+
+<main class="card" role="main" aria-labelledby="title">
+  <div class="header" aria-hidden="true">
+    <div class="cat" aria-hidden="true">
+      <div class="ear left" style="width:38px;height:38px;background:white;border:2px solid #222;position:absolute;transform:rotate(45deg);left:12px;top:6px"></div>
+      <div class="ear right" style="width:38px;height:38px;background:white;border:2px solid #222;position:absolute;transform:rotate(45deg);right:12px;top:6px"></div>
+      <div class="face" style="width:110px;height:100px;background:#fff;border:3px solid #222;border-radius:50%;position:absolute;left:15px;top:22px">
+        <div class="eye" style="width:8px;height:14px;background:#222;position:absolute;border-radius:10px;top:58px;left:36px"></div>
+        <div class="eye" style="width:8px;height:14px;background:#222;position:absolute;border-radius:10px;top:58px;right:36px"></div>
+        <div class="nose" style="width:12px;height:9px;background:gold;border-radius:50%;position:absolute;left:47px;top:68px"></div>
+      </div>
+      <div class="bow" style="position:absolute;top:16px;right:8px;font-size:30px">🎀</div>
+    </div>
+  </div>
+
+  <h1 id="title">🎂 Happy Birthday Keziah! 🎂</h1>
+  <h2>You're the sweetest person ever! 💖</h2>
+
+  <div class="cake" aria-hidden="true" style="font-size:2.5rem;margin-top:6px">🎂</div>
+
+  <p>May your birthday be filled with laughter, beautiful memories, endless happiness, and everything your heart desires.</p>
+
+  <div class="signature" aria-hidden="true">I love you ❤️<br>~ Idan</div>
+
+  <div class="controls" role="group" aria-label="Actions">
+    <button id="giftBtn" aria-expanded="false" aria-controls="surprise" aria-label="Open gift">🎁 Open Gift</button>
+    <button id="loveBtn">💖 Birthday Magic</button>
+    <button id="shareBtn" class="secondary" aria-label="Share or copy link">🔗 Share / Copy Link</button>
+  </div>
+
+<div id="surprise" role="status" aria-live="polite">
+
+  <h2 style="color:#ff2d7d;font-size:2rem;margin-bottom:15px;">
+    My Queen❤️
+  </h2>
+
+  <img src="/image/89d35ff8-dfe9-4a49-9675-90741ca2c203.jpeg"
+       style="width:70%;max-width:320px;border-radius:20px;
+       box-shadow:0 10px 25px rgba(0,0,0,.2);margin-bottom:15px;">
+
+  <img src="/image/3fdc2e4e-1644-4fd8-8405-823ef7d3a400.jpeg"
+       style="width:70%;max-width:320px;border-radius:20px;
+       box-shadow:0 10px 25px rgba(0,0,0,.2);margin-bottom:15px;">
+
+  <img src="/image/62950f56-cf20-4e6e-888e-b99900e2bcdc.jpeg"
+       style="width:70%;max-width:320px;border-radius:20px;
+       box-shadow:0 10px 25px rgba(0,0,0,.2);margin-bottom:15px;">
+
+  <p style="font-size:18px;color:#555;">
+    Every picture reminds me how lucky I am to have you.
+    Happy Birthday, my Queen. ❤️
+  </p>
+
+</div>
+</main>
+
+<canvas id="decorCanvas" aria-hidden="true"></canvas>
+
+<script>
+/*
+Mobile-first single file with full visual effects (no auto-reduction).
+- Canvas particle system (hearts & balloons)
+- Touch-friendly bursts, Birthday Magic burst
+- Share button: Web Share API or clipboard fallback
+- Non-blocking toasts
+Note: this file will run the full effects always (ignores Save-Data / effectiveType).
+*/
+
+const canvas = document.getElementById('decorCanvas');
+const ctx = canvas.getContext('2d');
+const HEART = '💖';
+const BALLOONS = ['🎈','🎀','💞'];
+
+// Force full effects (user requested "don't reduce effects")
+const FORCE_FULL_EFFECTS = true;
+
+// DPR cap to preserve battery but keep crisp visuals
+let dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+let width = 0, height = 0;
+const MAX_PARTICLES = 220; // high-cap for fuller effect
+const particles = [];
+const rand = (a,b) => a + Math.random() * (b - a);
+
+function resize() {
+  dpr = Math.min(window.devicePixelRatio || 1, 1.5);
+  width = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+  height = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+  canvas.width = Math.round(width * dpr);
+  canvas.height = Math.round(height * dpr);
+  canvas.style.width = width + 'px';
+  canvas.style.height = height + 'px';
+  ctx.setTransform(dpr,0,0,dpr,0,0);
+}
+
+function createParticle(x,y,opts={}) {
+  if (particles.length >= MAX_PARTICLES) return null;
+  const type = opts.type || (Math.random() < 0.7 ? 'heart' : 'balloon');
+  const size = opts.size || rand(18, 48);
+  const p = {
+    x: x === undefined ? rand(10, width-10) : x,
+    y: y === undefined ? height + rand(10,120) : y,
+    vx: opts.vx !== undefined ? opts.vx : rand(-1.2,1.2),
+    vy: opts.vy !== undefined ? opts.vy : -rand(20,160)/60,
+    size,
+    emoji: type === 'heart' ? HEART : BALLOONS[Math.floor(Math.random()*BALLOONS.length)],
+    birth: performance.now(),
+    life: opts.life || rand(4200, 11000),
+    alpha: rand(0.8,1),
+    wobble: rand(0.2,1.2),
+    rotation: rand(0, Math.PI*2),
+    spin: rand(-0.04,0.04)
+  };
+  particles.push(p);
+  return p;
+}
+
+function spawnFromBottom(n=1) {
+  for (let i=0;i<n;i++) createParticle(rand(20,width-20), height + rand(10,160));
+}
+
+function burst(x,y,count=24) {
+  for (let i=0;i<count;i++){
+    if (particles.length >= MAX_PARTICLES) break;
+    const angle = rand(0, Math.PI*2);
+    const speed = rand(1.2, 4.5);
+    createParticle(x, y, {
+      vx: Math.cos(angle) * speed,
+      vy: Math.sin(angle) * speed * -1.0 - rand(0.2,2.2),
+      life: rand(1800, 4800),
+      size: rand(12, 48)
+    });
+  }
+}
+
+// Animation loop
+let last = performance.now();
+function frame(now) {
+  const dt = now - last;
+  last = now;
+  ctx.clearRect(0,0,width,height);
+
+  // Gentle auto-spawn for a lively background
+  if (FORCE_FULL_EFFECTS && Math.random() < 0.6) spawnFromBottom(Math.random() < 0.7 ? 1 : 0);
+
+  for (let i = particles.length - 1; i >= 0; i--) {
+    const p = particles[i];
+    const age = now - p.birth;
+    if (age > p.life) { particles.splice(i,1); continue; }
+    const lifeFactor = 1 - age / p.life;
+
+    // physics
+    p.x += p.vx * (dt / 16.67);
+    p.y += p.vy * (dt / 16.67);
+    p.vy -= 0.002 * (dt / 16.67); // upward acceleration
+    p.x += Math.sin((age / 300) * p.wobble) * 0.5;
+    p.rotation += p.spin * (dt / 16.67);
+
+    // draw
+    ctx.save();
+    ctx.globalAlpha = Math.max(0, p.alpha * lifeFactor);
+    ctx.translate(p.x, p.y);
+    ctx.rotate(p.rotation);
+    ctx.font = `${p.size}px "Apple Color Emoji","Segoe UI Emoji","Noto Color Emoji", sans-serif`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(p.emoji, 0, 0);
+    ctx.restore();
+
+    // Cull if out of view
+    if (p.y < -120 || p.x < -200 || p.x > width + 200 || p.y > height + 240) {
+      particles.splice(i,1);
+    }
+  }
+
+  requestAnimationFrame(frame);
+}
+
+// UI: buttons and interactions
+const giftBtn = document.getElementById('giftBtn');
+const loveBtn = document.getElementById('loveBtn');
+const shareBtn = document.getElementById('shareBtn');
+const surprise = document.getElementById('surprise');
+
+giftBtn.addEventListener('click', () => {
+  surprise.style.display = 'block';
+  surprise.style.opacity = '0';
+  surprise.style.transform = 'scale(.9)';
+  setTimeout(()=>{ surprise.style.transition='transform .22s, opacity .22s'; surprise.style.transform='scale(1)'; surprise.style.opacity='1'; }, 10);
+  giftBtn.setAttribute('aria-expanded','true');
+});
+
+loveBtn.addEventListener('click', () => {
+  burst(width/2, height/2, 80);
+  showToast("Happy Birthday Keziah! ❤️ With all my love, Idan");
+});
+
+// Share / copy link behavior
+const SHARE_TEXT = "Happy Birthday Keziah! ❤️ Open this surprise:";
+shareBtn.addEventListener('click', async () => {
+  const url = window.location.href;
+  if (navigator.share) {
+    try {
+      await navigator.share({ title: document.title, text: SHARE_TEXT, url });
+    } catch (err) {
+      await copyFallback(url);
+    }
+  } else {
+    await copyFallback(url);
+  }
+});
+
+async function copyFallback(url) {
+  try {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      await navigator.clipboard.writeText(url);
+      showToast('Link copied to clipboard');
+    } else {
+      const ta = document.createElement('textarea');
+      ta.value = url; ta.style.position = 'fixed'; ta.style.left = '-9999px';
+      document.body.appendChild(ta); ta.select();
+      document.execCommand('copy'); ta.remove();
+      showToast('Link copied to clipboard');
+    }
+  } catch (e) {
+    showToast('Unable to copy — please share manually');
+  }
+}
+
+// Toast
+function showToast(text) {
+  const t = document.createElement('div');
+  t.setAttribute('role','status');
+  t.style.position='fixed';
+  t.style.left='50%';
+  t.style.transform='translateX(-50%)';
+  t.style.bottom='18px';
+  t.style.background='rgba(0,0,0,.85)';
+  t.style.color='white';
+  t.style.padding='10px 14px';
+  t.style.borderRadius='12px';
+  t.style.zIndex=9999;
+  t.style.fontSize='14px';
+  t.style.pointerEvents='none';
+  t.textContent = text;
+  document.body.appendChild(t);
+  setTimeout(()=>{ t.style.transition='opacity .35s'; t.style.opacity='0'; setTimeout(()=>t.remove(),420); }, 2200);
+}
+
+// Pointer tap burst (except when interacting with buttons)
+document.addEventListener('pointerdown', (ev) => {
+  const tag = ev.target && ev.target.tagName && ev.target.tagName.toLowerCase();
+  if (['button','input','textarea','select','a'].includes(tag)) return;
+  const rect = canvas.getBoundingClientRect();
+  const x = ev.clientX - rect.left;
+  const y = ev.clientY - rect.top;
+  burst(x,y,22);
+}, {passive:true});
+
+// Start/stop, resize
+window.addEventListener('resize', resize, {passive:true});
+resize();
+// initial lively spawn
+for (let i=0;i<14;i++) if (Math.random() < 0.8) spawnFromBottom(Math.random() < 0.6 ? 1 : 0);
+last = performance.now();
+requestAnimationFrame(frame);
+
+// Expose a tiny API for debugging or external triggers
+window.__birthdayFull = { burst, createParticle, particles };
+</script>
+</body>
+</html>   
